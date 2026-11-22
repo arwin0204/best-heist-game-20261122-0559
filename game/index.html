@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Midnight Vault — The Meridian Gallery Heist</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <header id="topbar">
+    <div class="brand">MIDNIGHT VAULT <span>— The Meridian Gallery Heist</span></div>
+    <div class="hud" id="hud">
+      <div class="hud-item">ROOM <b id="hud-room">1/3</b></div>
+      <div class="hud-item">LOOT <b id="hud-loot">$0</b></div>
+      <div class="hud-item">COINS <b id="hud-coins">60</b></div>
+      <div class="hud-item alarm">ALARM
+        <span class="meter"><span id="hud-alarm-fill"></span></span>
+        <b id="hud-alarm">0%</b>
+      </div>
+      <div class="hud-item">TIME <b id="hud-time">0:00</b></div>
+    </div>
+  </header>
+  <div id="stage">
+    <canvas id="game" width="1280" height="720"></canvas>
+    <div id="overlay"></div>
+  </div>
+  <footer id="toolbar">
+    <button class="tool" id="tool-smoke" title="Smoke bomb — blinds every vision cone for 5s (25 coins)">💨 SMOKE <b>1</b> · 25c</button>
+    <button class="tool" id="tool-emp" title="EMP pulse — freezes all cameras for 8s (40 coins)">⚡ EMP <b>2</b> · 40c</button>
+    <button class="tool" id="tool-coin" title="Noise coin — toss it, nearest guard walks to the clink (10 coins)">🪙 NOISE COIN <b>3</b> · 10c</button>
+    <span class="hint">Move <b>WASD / Arrows</b> · Sneak <b>Shift</b> (slow + quiet) · Sprint <b>Space</b> (fast + loud) · Click a tool or press 1/2/3 · <b>R</b> restart room · <b>M</b> mute</span>
+  </footer>
+  <p class="foot">An original game. No network, no library — plain canvas, WebAudio synth. Crack the vault, grab the loot, then reach the green EXIT before the alarm hits 100%.</p>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

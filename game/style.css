@@ -1,0 +1,31 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0b0e1a; color: #e8e6d9; font-family: "Segoe UI", Verdana, sans-serif; }
+#wrap { max-width: 1300px; margin: 0 auto; padding: 10px 12px 18px; }
+#topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 6px 2px 10px; }
+.brand { font-size: 22px; font-weight: 800; letter-spacing: 3px; color: #ffd75e; text-shadow: 0 0 14px rgba(255, 215, 94, .35); }
+.brand span { font-size: 13px; font-weight: 400; letter-spacing: 1px; color: #9aa3c0; }
+.hud { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.hud-item { background: #171b2e; border: 1px solid #2c3352; border-radius: 8px; padding: 6px 10px; font-size: 13px; color: #b9bed6; }
+.hud-item b { color: #fff; font-size: 14px; }
+.hud-item.alarm b { color: #ff5d5d; }
+.meter { display: inline-block; width: 110px; height: 10px; background: #2a0f16; border: 1px solid #5a2230; border-radius: 5px; overflow: hidden; vertical-align: middle; margin: 0 4px; }
+#hud-alarm-fill { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, #ffd75e, #ff9a3d, #ff3b3b); transition: width .2s; }
+#stage { position: relative; border: 2px solid #2c3352; border-radius: 10px; overflow: hidden; box-shadow: 0 0 40px rgba(0, 0, 0, .6); }
+#game { display: block; width: 100%; height: auto; background: #10142a; cursor: crosshair; }
+#overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+#overlay .panel { pointer-events: auto; background: rgba(8, 10, 22, .92); border: 1px solid #ffd75e; border-radius: 12px; padding: 22px 28px; max-width: 560px; text-align: center; box-shadow: 0 0 60px rgba(0, 0, 0, .8); }
+#overlay h1 { color: #ffd75e; letter-spacing: 3px; font-size: 30px; margin-bottom: 8px; }
+#overlay h2 { color: #ffd75e; letter-spacing: 2px; font-size: 24px; margin-bottom: 8px; }
+#overlay p { color: #c9cde0; font-size: 14px; line-height: 1.55; margin: 6px 0; }
+#overlay .big { font-size: 20px; color: #fff; font-weight: 700; }
+#overlay button { margin-top: 12px; background: #ffd75e; color: #14121a; border: 0; border-radius: 8px; padding: 12px 26px; font-size: 16px; font-weight: 800; letter-spacing: 1px; cursor: pointer; }
+#overlay button:hover { background: #ffe98a; }
+#overlay .keys { font-size: 12px; color: #8d94b0; }
+#toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+.tool { background: #1c2138; color: #e8e6d9; border: 1px solid #3a4270; border-radius: 8px; padding: 9px 12px; font-size: 13px; cursor: pointer; }
+.tool:hover { border-color: #ffd75e; }
+.tool:disabled { opacity: .4; cursor: default; }
+.tool b { color: #ffd75e; }
+.hint { font-size: 12px; color: #8d94b0; margin-left: 4px; }
+.hint b { color: #c9cde0; }
+.foot { margin-top: 8px; font-size: 12px; color: #6d7390; }
